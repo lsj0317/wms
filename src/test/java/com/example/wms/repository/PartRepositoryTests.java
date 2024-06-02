@@ -35,7 +35,7 @@ public class PartRepositoryTests {
             Part part = Part.builder()
                     .pCode("exPart..." + i)
                     .pName("testPart..." + i)
-                    .pSpec("100 * 100 * 50mm 사이즈")
+                    .pSpec("100 * 100 * 50mm 사이즈123")
                     .pType("나사류")
                     .build();
 

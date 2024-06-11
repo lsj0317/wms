@@ -1,8 +1,9 @@
-package com.example.wms.service;
+package com.example.wms.service.goods;
 
 import com.example.wms.dto.goods.GoodsDTO;
 import com.example.wms.entity.goods.Goods;
 import com.example.wms.repository.goods.GoodsRepository;
+import com.example.wms.service.GoodsService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Log4j2
 @RequiredArgsConstructor
 @Transactional
-public class GoodsServiceImpl implements GoodsService{
+public class GoodsServiceImpl implements GoodsService {
 
     private final ModelMapper modelMapper;  // DTO와 Entity 변환을 햐주는 객체
 

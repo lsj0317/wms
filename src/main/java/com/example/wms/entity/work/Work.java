@@ -26,6 +26,9 @@ public class Work extends BaseEntity {
     @Column(nullable = false)
     private int wQty; // 생산수량
 
-
+    public void changeWork(Long gNo, int wQty){
+        this.gNo = gNo;
+        this.wQty = wQty;
+    }
 
 }

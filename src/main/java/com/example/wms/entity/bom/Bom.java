@@ -30,4 +30,11 @@ public class Bom {
     @Column(length = 500)
     private String bNote; // 비고(특이사항 기록) : null 허용
 
+    public void changeBom(Long pNo, int bQty, Long gNo, String bNote){
+        this.pNo = pNo;
+        this.bQty = bQty;
+        this.gNo = gNo;
+        this.bNote = bNote;
+    }
+
 }

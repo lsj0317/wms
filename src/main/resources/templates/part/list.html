@@ -4,7 +4,147 @@
     <meta charset="UTF-8">
     <title>list</title>
     <style>
-
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+        .wraps {
+            width: 100%;
+            height: 100%;
+        }
+        /* 상단메뉴 */
+        .topMenu {
+            width: 100%;
+            height: 10%;
+            /*background-color: green;*/
+            border: 1px solid black;
+        }
+        .topMenu > table {
+            width: 100%;
+            height: 100%;
+        }
+        .topMenu > table > tr {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .topMenu > table > tr > td {
+            width: 100%;
+            margin-right: 10px;
+        }
+        .topMenu > table > tr > td > a {
+            text-decoration: none;
+            color: black;
+        }
+            /* 하단메인 */
+        .mainContent {
+            width: 100%;
+            height: 90%;
+            /*background-color: blue;*/
+            border: 1px solid black;
+            display: flex;
+        }
+        /* 리스트 */
+        .listPage {
+            width: 50%;
+            height: 100%;
+            border: 1px solid black;
+        }
+        /* 리스트 제목 */
+        .listTitle {
+            width: 100%;
+            height: 10%;
+            border: 1px solid black;
+            text-align: center;
+        }
+        /* 리스트 내용 */
+        .listContent {
+            width: 100%;
+            height: 90%;
+            border: 1px solid black;
+        }
+        /* 검색 영역 */
+        .searchSection {
+            width: 100%;
+            height: 10%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .searchFn {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+        .searchFn > input {
+            margin-right: 10px;
+        }
+        .newFn {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+        /* 리스트 영역 */
+        .listSection {
+            width: 100%;
+            height: 80%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .listSection > table {
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+        }
+        .listSection > table > tr, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        .listSection > table > tbody {
+            overflow: auto;
+        }
+            /* 페이징 영역 */
+        .pagingSection {
+            width: 100%;
+            height: 10%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 상세내역 */
+        .detailPage {
+            width: 50%;
+            height: 100%;
+            border: 1px solid black;
+        }
+        /* 상세정보 제목 */
+        .detailTitle {
+            width: 100%;
+            height: 10%;
+            border: 1px solid black;
+            text-align: center;
+        }
+        /* 상세정보 내용 */
+        .detailContent {
+            width: 100%;
+            height: 90%;
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
@@ -14,33 +154,124 @@
         <div class="topMenu">
             <table>
                 <tr>
-                    <td>로고</td>
-                    <td>자재</td>
-                    <td>BOM</td>
-                    <td>기록</td>
-                    <td>상품</td>
-                    <td>생산</td>
-                    <td>로그인</td>
+                    <td>
+                        <a href="#none">로고</a>
+                    </td>
+                    <td>
+                        <a href="#none">자재</a>
+                    </td>
+                    <td>
+                        <a href="#none">BOM</a>
+                    </td>
+                    <td>
+                        <a href="#none">기록</a>
+                    </td>
+                    <td>
+                        <a href="#none">상품</a>
+                    </td>
+                    <td>
+                        <a href="#none">생산</a>
+                    </td>
+                    <td>
+                        <a href="#none">로그인</a>
+                    </td>
                 </tr>
             </table>
         </div>
         <!-- 메인 -->
         <div class="mainContent">
-            <div>
-                <div>
+            <div class="listPage">
+                <div class="listTitle">
+                    <h1>자재 리스트</h1>
+                </div>
+                <div class="listContent">
+                    <!-- 검색기능 -->
+                    <div class="searchSection">
+                        <div class="searchFn">
+                            <input type="text"/>
+                            <button>검색</button>
+                        </div>
+                        <div class="newFn">
+                            <button>신규등록</button>
+                        </div>
 
+                    </div>
+                    <!-- 리스트 -->
+                    <div class="listSection">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>자재코드</td>
+                                    <td>자재이름</td>
+                                    <td>수량</td>
+                                    <td>자재규격</td>
+                                    <td>자재타입</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>wms-1111</td>
+                                <td>사각볼트</td>
+                                <td>1000ea</td>
+                                <td>24*24*100mm 검정</td>
+                                <td>기타류</td>
+                            </tr>
+                            <tr>
+                                <td>wms-2222</td>
+                                <td>사각너트</td>
+                                <td>1000ea</td>
+                                <td>24*24*100mm 검정</td>
+                                <td>기타류</td>
+                            </tr>
+                            <tr>
+                                <td>wms-3333</td>
+                                <td>육각나사</td>
+                                <td>1000ea</td>
+                                <td>14*24*80mm 검정</td>
+                                <td>기타류</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 페이징 -->
+                    <div class="pagingSection">
+                        <ul>
+                            <li>
+                                <button>이전</button>
+                                <button>1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button>4</button>
+                                <button>다음</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <h1>자재 리스트</h1>
-            <table>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
-            </table>
+            <div class="detailPage">
+                <div class="detailTitle">
+                    <h1>자재정보</h1>
+                </div>
+                <div class="detailContent">
+                    <!-- 자재내용 상단  -->
+                    <div>
+                        <div>
+                            <!-- 자재 이미지 -->
+                            <img>
+                        </div>
+                        <div>
+                            <!--  자재 이름 -->
+                            <input>
+                            <!--  자재 내용 -->
+                            <input>
+                        </div>
+                    </div>
+                    <!-- 자재내용 하단 -->
+                    <div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

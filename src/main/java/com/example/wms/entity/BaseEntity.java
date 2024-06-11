@@ -1,5 +1,5 @@
-package org.zerock.b01.domain;
 
+package com.example.wms.entity;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @EntityListeners(value = { AuditingEntityListener.class })
 @Getter
-abstract class BaseEntity {
+public abstract class BaseEntity {
 
     @CreatedDate
     @Column(name = "regdate", updatable = false)

@@ -1,6 +1,5 @@
+
 package com.example.wms.entity;
-
-
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -24,4 +23,5 @@ public abstract class BaseEntity {
     @LastModifiedDate
     @Column(name ="moddate" )
     private LocalDateTime modDate;
+
 }

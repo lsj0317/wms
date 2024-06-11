@@ -1,3 +1,4 @@
+
 package com.example.wms.repository.goods;
 
 import com.example.wms.entity.goods.Goods;

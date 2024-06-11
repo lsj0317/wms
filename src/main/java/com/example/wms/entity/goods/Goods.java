@@ -1,3 +1,4 @@
+
 package com.example.wms.entity.goods;
 
 import com.example.wms.entity.BaseEntity;
@@ -31,7 +32,5 @@ public class Goods extends BaseEntity {
 
     @Column(nullable = false)
     private String gSpec;   // 상품규격
-
-
 
 }
